@@ -1,1177 +1,1340 @@
 {
   "alerts": [
     {
-      "id": "al_1790315001192_6ef843",
-      "rule_id": "rule_highrisk_country",
-      "rule_name": "高风险国家交易",
-      "fingerprint": "6ef843d8bbdccc5a",
-      "level": "中",
-      "risk_score": 60,
-      "max_risk_score": 60,
-      "action": "review",
-      "reason": "高风险地区交易",
-      "subject": {
-        "ip": "9.9.9.9"
-      },
-      "tags": [
-        "地区"
-      ],
-      "count": 1,
-      "first_seen": 1790315001.1927524,
-      "last_seen": 1790315001.1927524,
-      "status": "new",
-      "source": "rule_engine",
-      "event_sample": {
-        "type": "transfer",
-        "amount": 500000,
-        "ip": "9.9.9.9",
-        "user_id": "u1",
-        "country": "RU",
-        "ts": 1790315001.1927524,
-        "id": "ev_1790315001192"
-      }
-    },
-    {
-      "id": "al_1790315001192_a6d974",
-      "rule_id": "rule_big_transfer",
-      "rule_name": "大额转账检测",
-      "fingerprint": "a6d974540b747537",
-      "level": "中",
-      "risk_score": 70,
-      "max_risk_score": 70,
-      "action": "review",
-      "reason": "大额转账需人工复核",
-      "subject": {
-        "ip": "9.9.9.9"
-      },
-      "tags": [
-        "金额",
-        "转账"
-      ],
-      "count": 1,
-      "first_seen": 1790315001.1927524,
-      "last_seen": 1790315001.1927524,
-      "status": "new",
-      "source": "rule_engine",
-      "event_sample": {
-        "type": "transfer",
-        "amount": 500000,
-        "ip": "9.9.9.9",
-        "user_id": "u1",
-        "country": "RU",
-        "ts": 1790315001.1927524,
-        "id": "ev_1790315001192"
-      }
-    },
-    {
-      "id": "al_1790315001206_af3368",
+      "id": "al_1790353110577_452d9c",
       "rule_id": "rule_amount_spike",
-      "rule_name": "金额突增检测",
-      "fingerprint": "af3368f0ded87775",
+      "rule_name": "交易金额出现突增标记时告警",
+      "fingerprint": "452d9c66bf5351f2",
       "level": "中",
       "risk_score": 58,
       "max_risk_score": 58,
       "action": "review",
-      "reason": "金额突增",
+      "reason": "交易金额出现突增标记时告警",
       "subject": {
-        "ip": "121.71.47.215"
+        "ip": "167.183.0.13",
+        "user_id": "u69550"
       },
       "tags": [
         "金额"
       ],
       "count": 1,
-      "first_seen": 1790315001.2063122,
-      "last_seen": 1790315001.2063122,
+      "first_seen": 1790353110.5775542,
+      "last_seen": 1790353110.5775542,
       "status": "new",
       "source": "rule_engine",
       "event_sample": {
-        "id": "ev_1790315001206_3614",
-        "type": "transfer",
-        "ts": 1790315001.2063122,
-        "ip": "121.71.47.215",
-        "user_id": "u3433",
-        "device_id": "android",
-        "channel": "pc",
-        "amount": 32050.75,
+        "id": "ev_1790353110577_7699",
+        "type": "order",
+        "ts": 1790353110.5775542,
+        "ip": "167.183.0.13",
+        "user_id": "u69550",
+        "device_id": "ios",
+        "channel": "app",
+        "amount": 49632.03,
         "country": "RU",
         "risk_hint": "amount_spike"
       }
     },
     {
-      "id": "al_1790315001206_44f6da",
+      "id": "al_1790353110579_4bfaa7",
       "rule_id": "rule_highrisk_country",
-      "rule_name": "高风险国家交易",
-      "fingerprint": "44f6dac9b7ec8275",
+      "rule_name": "来自高风险国家/地区的交易转人工复核",
+      "fingerprint": "4bfaa79a494a855f",
       "level": "中",
       "risk_score": 60,
       "max_risk_score": 60,
       "action": "review",
-      "reason": "高风险地区交易",
+      "reason": "来自高风险国家/地区的交易转人工复核",
       "subject": {
-        "ip": "121.71.47.215"
+        "ip": "131.126.53.64",
+        "user_id": "u63947"
       },
       "tags": [
         "地区"
       ],
       "count": 1,
-      "first_seen": 1790315001.2063122,
-      "last_seen": 1790315001.2063122,
+      "first_seen": 1790353110.5792608,
+      "last_seen": 1790353110.5792608,
       "status": "new",
       "source": "rule_engine",
       "event_sample": {
-        "id": "ev_1790315001206_3614",
-        "type": "transfer",
-        "ts": 1790315001.2063122,
-        "ip": "121.71.47.215",
-        "user_id": "u3433",
-        "device_id": "android",
-        "channel": "pc",
-        "amount": 32050.75,
+        "id": "ev_1790353110579_2334",
+        "type": "payment",
+        "ts": 1790353110.5792608,
+        "ip": "131.126.53.64",
+        "user_id": "u63947",
+        "device_id": "ios",
+        "channel": "app",
+        "amount": 62561.53,
         "country": "RU",
-        "risk_hint": "amount_spike"
+        "risk_hint": "ip_anomaly"
       }
     },
     {
-      "id": "al_1790315001208_b07021",
+      "id": "al_1790353110580_31d634",
       "rule_id": "rule_amount_spike",
-      "rule_name": "金额突增检测",
-      "fingerprint": "b0702118cb4938cd",
+      "rule_name": "交易金额出现突增标记时告警",
+      "fingerprint": "31d6343eca99c5f5",
       "level": "中",
       "risk_score": 58,
       "max_risk_score": 58,
       "action": "review",
-      "reason": "金额突增",
+      "reason": "交易金额出现突增标记时告警",
       "subject": {
-        "ip": "60.255.216.231"
+        "ip": "219.13.161.219",
+        "user_id": "u7689"
       },
       "tags": [
         "金额"
       ],
       "count": 1,
-      "first_seen": 1790315001.208982,
-      "last_seen": 1790315001.208982,
+      "first_seen": 1790353110.5807514,
+      "last_seen": 1790353110.5807514,
       "status": "new",
       "source": "rule_engine",
       "event_sample": {
-        "id": "ev_1790315001208_4326",
+        "id": "ev_1790353110580_5341",
+        "type": "login",
+        "ts": 1790353110.5807514,
+        "ip": "219.13.161.219",
+        "user_id": "u7689",
+        "device_id": "ios",
+        "channel": "pc",
+        "amount": null,
+        "country": "RU",
+        "risk_hint": "amount_spike"
+      }
+    },
+    {
+      "id": "al_1790353110582_958841",
+      "rule_id": "rule_amount_spike",
+      "rule_name": "交易金额出现突增标记时告警",
+      "fingerprint": "958841dcb9284013",
+      "level": "中",
+      "risk_score": 58,
+      "max_risk_score": 58,
+      "action": "review",
+      "reason": "交易金额出现突增标记时告警",
+      "subject": {
+        "ip": "115.141.103.126",
+        "user_id": "u71445"
+      },
+      "tags": [
+        "金额"
+      ],
+      "count": 1,
+      "first_seen": 1790353110.5826094,
+      "last_seen": 1790353110.5826094,
+      "status": "new",
+      "source": "rule_engine",
+      "event_sample": {
+        "id": "ev_1790353110582_6905",
         "type": "sms",
-        "ts": 1790315001.208982,
-        "ip": "60.255.216.231",
-        "user_id": "u74642",
+        "ts": 1790353110.5826094,
+        "ip": "115.141.103.126",
+        "user_id": "u71445",
         "device_id": "h5",
         "channel": "app",
-        "amount": 147523.74,
+        "amount": 153905.56,
         "country": "SG",
         "risk_hint": "amount_spike"
       }
     },
     {
-      "id": "al_1790315001210_40aa3e",
-      "rule_id": "rule_amount_spike",
-      "rule_name": "金额突增检测",
-      "fingerprint": "40aa3ee291d2107d",
-      "level": "中",
-      "risk_score": 58,
-      "max_risk_score": 58,
-      "action": "review",
-      "reason": "金额突增",
-      "subject": {
-        "ip": "131.236.117.162"
-      },
-      "tags": [
-        "金额"
-      ],
-      "count": 1,
-      "first_seen": 1790315001.2102664,
-      "last_seen": 1790315001.2102664,
-      "status": "new",
-      "source": "rule_engine",
-      "event_sample": {
-        "id": "ev_1790315001210_8355",
-        "type": "sms",
-        "ts": 1790315001.2102664,
-        "ip": "131.236.117.162",
-        "user_id": "u68854",
-        "device_id": "web",
-        "channel": "pc",
-        "amount": 49852.22,
-        "country": "BR",
-        "risk_hint": "amount_spike"
-      }
-    },
-    {
-      "id": "al_1790315001211_4a5b31",
-      "rule_id": "rule_highrisk_country",
-      "rule_name": "高风险国家交易",
-      "fingerprint": "4a5b31a7d2f667dc",
-      "level": "中",
-      "risk_score": 60,
-      "max_risk_score": 60,
-      "action": "review",
-      "reason": "高风险地区交易",
-      "subject": {
-        "ip": "79.251.128.59"
-      },
-      "tags": [
-        "地区"
-      ],
-      "count": 1,
-      "first_seen": 1790315001.2119427,
-      "last_seen": 1790315001.2119427,
-      "status": "new",
-      "source": "rule_engine",
-      "event_sample": {
-        "id": "ev_1790315001211_3228",
-        "type": "transfer",
-        "ts": 1790315001.2119427,
-        "ip": "79.251.128.59",
-        "user_id": "u39732",
-        "device_id": "android",
-        "channel": "app",
-        "amount": 108517.43,
-        "country": "BR",
-        "risk_hint": null
-      }
-    },
-    {
-      "id": "al_1790315001211_8644cd",
-      "rule_id": "rule_big_transfer",
-      "rule_name": "大额转账检测",
-      "fingerprint": "8644cda234f8999e",
-      "level": "中",
-      "risk_score": 70,
-      "max_risk_score": 70,
-      "action": "review",
-      "reason": "大额转账需人工复核",
-      "subject": {
-        "ip": "79.251.128.59"
-      },
-      "tags": [
-        "金额",
-        "转账"
-      ],
-      "count": 1,
-      "first_seen": 1790315001.2119427,
-      "last_seen": 1790315001.2119427,
-      "status": "new",
-      "source": "rule_engine",
-      "event_sample": {
-        "id": "ev_1790315001211_3228",
-        "type": "transfer",
-        "ts": 1790315001.2119427,
-        "ip": "79.251.128.59",
-        "user_id": "u39732",
-        "device_id": "android",
-        "channel": "app",
-        "amount": 108517.43,
-        "country": "BR",
-        "risk_hint": null
-      }
-    },
-    {
-      "id": "al_1790315001214_fa88b9",
-      "rule_id": "rule_amount_spike",
-      "rule_name": "金额突增检测",
-      "fingerprint": "fa88b93d0ff9b384",
-      "level": "中",
-      "risk_score": 58,
-      "max_risk_score": 58,
-      "action": "review",
-      "reason": "金额突增",
-      "subject": {
-        "ip": "156.245.192.23"
-      },
-      "tags": [
-        "金额"
-      ],
-      "count": 1,
-      "first_seen": 1790315001.2146835,
-      "last_seen": 1790315001.2146835,
-      "status": "new",
-      "source": "rule_engine",
-      "event_sample": {
-        "id": "ev_1790315001214_8109",
-        "type": "order",
-        "ts": 1790315001.2146835,
-        "ip": "156.245.192.23",
-        "user_id": "u27524",
-        "device_id": "android",
-        "channel": "h5",
-        "amount": 171873.09,
-        "country": "SG",
-        "risk_hint": "amount_spike"
-      }
-    },
-    {
-      "id": "al_1790315001216_8cfd80",
-      "rule_id": "rule_amount_spike",
-      "rule_name": "金额突增检测",
-      "fingerprint": "8cfd80c4fc34260b",
-      "level": "中",
-      "risk_score": 58,
-      "max_risk_score": 58,
-      "action": "review",
-      "reason": "金额突增",
-      "subject": {
-        "ip": "210.227.224.26"
-      },
-      "tags": [
-        "金额"
-      ],
-      "count": 1,
-      "first_seen": 1790315001.2162256,
-      "last_seen": 1790315001.2162256,
-      "status": "new",
-      "source": "rule_engine",
-      "event_sample": {
-        "id": "ev_1790315001216_5330",
-        "type": "register",
-        "ts": 1790315001.2162256,
-        "ip": "210.227.224.26",
-        "user_id": "u43789",
-        "device_id": "ios",
-        "channel": "h5",
-        "amount": null,
-        "country": "US",
-        "risk_hint": "amount_spike"
-      }
-    },
-    {
-      "id": "al_1790315001218_a65647",
-      "rule_id": "rule_amount_spike",
-      "rule_name": "金额突增检测",
-      "fingerprint": "a65647a74156deaa",
-      "level": "中",
-      "risk_score": 58,
-      "max_risk_score": 58,
-      "action": "review",
-      "reason": "金额突增",
-      "subject": {
-        "ip": "13.219.135.189"
-      },
-      "tags": [
-        "金额"
-      ],
-      "count": 1,
-      "first_seen": 1790315001.218109,
-      "last_seen": 1790315001.218109,
-      "status": "new",
-      "source": "rule_engine",
-      "event_sample": {
-        "id": "ev_1790315001218_1451",
-        "type": "withdraw",
-        "ts": 1790315001.218109,
-        "ip": "13.219.135.189",
-        "user_id": "u63534",
-        "device_id": "web",
-        "channel": "pc",
-        "amount": 14419.99,
-        "country": "BR",
-        "risk_hint": "amount_spike"
-      }
-    },
-    {
-      "id": "al_1790315001218_83bf3f",
-      "rule_id": "rule_highrisk_country",
-      "rule_name": "高风险国家交易",
-      "fingerprint": "83bf3f908d8987a9",
-      "level": "中",
-      "risk_score": 60,
-      "max_risk_score": 60,
-      "action": "review",
-      "reason": "高风险地区交易",
-      "subject": {
-        "ip": "13.219.135.189"
-      },
-      "tags": [
-        "地区"
-      ],
-      "count": 1,
-      "first_seen": 1790315001.218109,
-      "last_seen": 1790315001.218109,
-      "status": "new",
-      "source": "rule_engine",
-      "event_sample": {
-        "id": "ev_1790315001218_1451",
-        "type": "withdraw",
-        "ts": 1790315001.218109,
-        "ip": "13.219.135.189",
-        "user_id": "u63534",
-        "device_id": "web",
-        "channel": "pc",
-        "amount": 14419.99,
-        "country": "BR",
-        "risk_hint": "amount_spike"
-      }
-    },
-    {
-      "id": "al_1790315001221_0213f1",
-      "rule_id": "rule_highrisk_country",
-      "rule_name": "高风险国家交易",
-      "fingerprint": "0213f1f165fbf491",
-      "level": "中",
-      "risk_score": 60,
-      "max_risk_score": 60,
-      "action": "review",
-      "reason": "高风险地区交易",
-      "subject": {
-        "ip": "104.52.245.161"
-      },
-      "tags": [
-        "地区"
-      ],
-      "count": 1,
-      "first_seen": 1790315001.2210808,
-      "last_seen": 1790315001.2210808,
-      "status": "new",
-      "source": "rule_engine",
-      "event_sample": {
-        "id": "ev_1790315001221_7194",
-        "type": "withdraw",
-        "ts": 1790315001.2210808,
-        "ip": "104.52.245.161",
-        "user_id": "u62383",
-        "device_id": "web",
-        "channel": "pc",
-        "amount": 18475.72,
-        "country": "RU",
-        "risk_hint": null
-      }
-    },
-    {
-      "id": "al_1790315046385_b485b7",
-      "rule_id": "rule_withdraw_freq",
-      "rule_name": "提现频率监控",
-      "fingerprint": "b485b703b72b25e4",
-      "level": "中",
-      "risk_score": 65,
-      "max_risk_score": 65,
-      "action": "alert",
-      "reason": "提现过于频繁",
-      "subject": {
-        "ip": "11.0.0.3"
-      },
-      "tags": [
-        "高频",
-        "提现"
-      ],
-      "count": 1,
-      "first_seen": 1790315046.3859375,
-      "last_seen": 1790315046.3859375,
-      "status": "new",
-      "source": "rule_engine",
-      "event_sample": {
-        "type": "withdraw",
-        "amount": 100,
-        "ip": "11.0.0.3",
-        "user_id": "u1000",
-        "country": "CN",
-        "ts": 1790315046.3859375,
-        "id": "ev_1790315046385"
-      }
-    },
-    {
-      "id": "al_1790315046418_ca9536",
-      "rule_id": "rule_withdraw_freq",
-      "rule_name": "提现频率监控",
-      "fingerprint": "ca9536ef5929793a",
-      "level": "中",
-      "risk_score": 65,
-      "max_risk_score": 65,
-      "action": "alert",
-      "reason": "提现过于频繁",
-      "subject": {
-        "ip": "11.0.0.4"
-      },
-      "tags": [
-        "高频",
-        "提现"
-      ],
-      "count": 1,
-      "first_seen": 1790315046.4186194,
-      "last_seen": 1790315046.4186194,
-      "status": "new",
-      "source": "rule_engine",
-      "event_sample": {
-        "type": "withdraw",
-        "amount": 100,
-        "ip": "11.0.0.4",
-        "user_id": "u1000",
-        "country": "CN",
-        "ts": 1790315046.4186194,
-        "id": "ev_1790315046418"
-      }
-    },
-    {
-      "id": "al_1790315955219_16f490",
-      "rule_id": "rule_withdraw_freq",
-      "rule_name": "提现频率监控",
-      "fingerprint": "16f4903193558c6b",
-      "level": "中",
-      "risk_score": 65,
-      "max_risk_score": 65,
-      "action": "alert",
-      "reason": "提现过于频繁",
-      "subject": {
-        "ip": "10.1.1.3"
-      },
-      "tags": [
-        "高频",
-        "提现"
-      ],
-      "count": 1,
-      "first_seen": 1790315955.219807,
-      "last_seen": 1790315955.219807,
-      "status": "new",
-      "source": "rule_engine",
-      "event_sample": {
-        "type": "withdraw",
-        "user_id": "u777",
-        "ip": "10.1.1.3",
-        "amount": 90000,
-        "ts": 1790315955.219807,
-        "id": "ev_1790315955219"
-      }
-    },
-    {
-      "id": "al_1790315955232_4f0741",
-      "rule_id": "rule_withdraw_freq",
-      "rule_name": "提现频率监控",
-      "fingerprint": "4f074188a76eb21d",
-      "level": "中",
-      "risk_score": 65,
-      "max_risk_score": 65,
-      "action": "alert",
-      "reason": "提现过于频繁",
-      "subject": {
-        "ip": "10.1.1.4"
-      },
-      "tags": [
-        "高频",
-        "提现"
-      ],
-      "count": 1,
-      "first_seen": 1790315955.2322128,
-      "last_seen": 1790315955.2322128,
-      "status": "new",
-      "source": "rule_engine",
-      "event_sample": {
-        "type": "withdraw",
-        "user_id": "u777",
-        "ip": "10.1.1.4",
-        "amount": 90000,
-        "ts": 1790315955.2322128,
-        "id": "ev_1790315955232"
-      }
-    },
-    {
-      "id": "al_1790315978072_8dbfed",
-      "rule_id": "rule_amount_spike",
-      "rule_name": "金额突增检测",
-      "fingerprint": "8dbfed0258f551bb",
-      "level": "中",
-      "risk_score": 58,
-      "max_risk_score": 58,
-      "action": "review",
-      "reason": "金额突增",
-      "subject": {
-        "ip": "95.6.6.209"
-      },
-      "tags": [
-        "金额"
-      ],
-      "count": 8,
-      "first_seen": 1790315978.072371,
-      "last_seen": 1790315978.1674755,
-      "status": "new",
-      "source": "rule_engine",
-      "event_sample": {
-        "id": "ev_1790315978167_9231",
-        "type": "transfer",
-        "ts": 1790315978.1674755,
-        "ip": "95.6.6.209",
-        "user_id": "u95199",
-        "device_id": "web",
-        "channel": "pc",
-        "amount": 120000,
-        "country": "US",
-        "risk_hint": "amount_spike"
-      }
-    },
-    {
-      "id": "al_1790315978072_cf25d9",
-      "rule_id": "rule_big_transfer",
-      "rule_name": "大额转账检测",
-      "fingerprint": "cf25d9c46c46b6ab",
-      "level": "中",
-      "risk_score": 70,
-      "max_risk_score": 70,
-      "action": "review",
-      "reason": "大额转账需人工复核",
-      "subject": {
-        "ip": "95.6.6.209"
-      },
-      "tags": [
-        "金额",
-        "转账"
-      ],
-      "count": 30,
-      "first_seen": 1790315978.072371,
-      "last_seen": 1790315978.1711822,
-      "status": "new",
-      "source": "rule_engine",
-      "event_sample": {
-        "id": "ev_1790315978171_5323",
-        "type": "transfer",
-        "ts": 1790315978.1711822,
-        "ip": "95.6.6.209",
-        "user_id": "u69549",
-        "device_id": "android",
-        "channel": "h5",
-        "amount": 120000,
-        "country": "SG",
-        "risk_hint": "new_device"
-      }
-    },
-    {
-      "id": "al_1790315978076_6d2c75",
-      "rule_id": "rule_highrisk_country",
-      "rule_name": "高风险国家交易",
-      "fingerprint": "6d2c7599caf2f49e",
-      "level": "中",
-      "risk_score": 60,
-      "max_risk_score": 60,
-      "action": "review",
-      "reason": "高风险地区交易",
-      "subject": {
-        "ip": "95.6.6.209"
-      },
-      "tags": [
-        "地区"
-      ],
-      "count": 12,
-      "first_seen": 1790315978.076878,
-      "last_seen": 1790315978.161271,
-      "status": "new",
-      "source": "rule_engine",
-      "event_sample": {
-        "id": "ev_1790315978161_8777",
-        "type": "transfer",
-        "ts": 1790315978.161271,
-        "ip": "95.6.6.209",
-        "user_id": "u11104",
-        "device_id": "ios",
-        "channel": "app",
-        "amount": 120000,
-        "country": "RU",
-        "risk_hint": null
-      }
-    },
-    {
-      "id": "al_1790315978173_4d8332",
-      "rule_id": "rule_amount_spike",
-      "rule_name": "金额突增检测",
-      "fingerprint": "4d83320e3a078279",
-      "level": "中",
-      "risk_score": 58,
-      "max_risk_score": 58,
-      "action": "review",
-      "reason": "金额突增",
-      "subject": {
-        "ip": "88.53.158.159"
-      },
-      "tags": [
-        "金额"
-      ],
-      "count": 1,
-      "first_seen": 1790315978.173056,
-      "last_seen": 1790315978.173056,
-      "status": "new",
-      "source": "rule_engine",
-      "event_sample": {
-        "id": "ev_1790315978173_4107",
-        "type": "api",
-        "ts": 1790315978.173056,
-        "ip": "88.53.158.159",
-        "user_id": "u89055",
-        "device_id": "android",
-        "channel": "app",
-        "amount": 160353.97,
-        "country": "RU",
-        "risk_hint": "amount_spike"
-      }
-    },
-    {
-      "id": "al_1790315978175_cc375f",
-      "rule_id": "rule_amount_spike",
-      "rule_name": "金额突增检测",
-      "fingerprint": "cc375fab852ec6cd",
-      "level": "中",
-      "risk_score": 58,
-      "max_risk_score": 58,
-      "action": "review",
-      "reason": "金额突增",
-      "subject": {
-        "ip": "48.196.86.115"
-      },
-      "tags": [
-        "金额"
-      ],
-      "count": 1,
-      "first_seen": 1790315978.175387,
-      "last_seen": 1790315978.175387,
-      "status": "new",
-      "source": "rule_engine",
-      "event_sample": {
-        "id": "ev_1790315978175_2362",
-        "type": "payment",
-        "ts": 1790315978.175387,
-        "ip": "48.196.86.115",
-        "user_id": "u14982",
-        "device_id": "android",
-        "channel": "app",
-        "amount": 92505.95,
-        "country": "SG",
-        "risk_hint": "amount_spike"
-      }
-    },
-    {
-      "id": "al_1790315978177_acde43",
+      "id": "al_1790353110584_5bf9e6",
       "rule_id": "rule_new_device",
-      "rule_name": "新设备登录预警",
-      "fingerprint": "acde43d73c591e24",
+      "rule_name": "新设备登录产生告警",
+      "fingerprint": "5bf9e635bd15a053",
       "level": "低",
       "risk_score": 55,
       "max_risk_score": 55,
       "action": "alert",
-      "reason": "新设备登录",
+      "reason": "新设备登录产生告警",
       "subject": {
-        "ip": "27.196.216.155"
+        "ip": "126.2.118.85",
+        "user_id": "u57430"
       },
       "tags": [
         "设备"
       ],
       "count": 1,
-      "first_seen": 1790315978.177534,
-      "last_seen": 1790315978.177534,
+      "first_seen": 1790353110.58476,
+      "last_seen": 1790353110.58476,
       "status": "new",
       "source": "rule_engine",
       "event_sample": {
-        "id": "ev_1790315978177_5758",
+        "id": "ev_1790353110584_8296",
         "type": "login",
-        "ts": 1790315978.177534,
-        "ip": "27.196.216.155",
-        "user_id": "u37908",
+        "ts": 1790353110.58476,
+        "ip": "126.2.118.85",
+        "user_id": "u57430",
         "device_id": "ios",
         "channel": "app",
         "amount": null,
-        "country": "CN",
+        "country": "SG",
         "risk_hint": "new_device"
       }
     },
     {
-      "id": "al_1790315978179_6c17e9",
+      "id": "al_1790353110588_e09f34",
       "rule_id": "rule_amount_spike",
-      "rule_name": "金额突增检测",
-      "fingerprint": "6c17e99348de544c",
+      "rule_name": "交易金额出现突增标记时告警",
+      "fingerprint": "e09f3425afd0bb2d",
       "level": "中",
       "risk_score": 58,
       "max_risk_score": 58,
       "action": "review",
-      "reason": "金额突增",
+      "reason": "交易金额出现突增标记时告警",
       "subject": {
-        "ip": "98.217.207.214"
+        "ip": "132.142.61.253",
+        "user_id": "u4415"
       },
       "tags": [
         "金额"
       ],
       "count": 1,
-      "first_seen": 1790315978.1796575,
-      "last_seen": 1790315978.1796575,
+      "first_seen": 1790353110.5881479,
+      "last_seen": 1790353110.5881479,
       "status": "new",
       "source": "rule_engine",
       "event_sample": {
-        "id": "ev_1790315978179_4675",
-        "type": "order",
-        "ts": 1790315978.1796575,
-        "ip": "98.217.207.214",
-        "user_id": "u17356",
-        "device_id": "web",
-        "channel": "h5",
-        "amount": 104640.46,
-        "country": "SG",
-        "risk_hint": "amount_spike"
-      }
-    },
-    {
-      "id": "al_1790315978181_a5355f",
-      "rule_id": "rule_highrisk_country",
-      "rule_name": "高风险国家交易",
-      "fingerprint": "a5355f968b89b288",
-      "level": "中",
-      "risk_score": 60,
-      "max_risk_score": 60,
-      "action": "review",
-      "reason": "高风险地区交易",
-      "subject": {
-        "ip": "166.10.116.17"
-      },
-      "tags": [
-        "地区"
-      ],
-      "count": 1,
-      "first_seen": 1790315978.1819894,
-      "last_seen": 1790315978.1819894,
-      "status": "new",
-      "source": "rule_engine",
-      "event_sample": {
-        "id": "ev_1790315978181_7912",
-        "type": "payment",
-        "ts": 1790315978.1819894,
-        "ip": "166.10.116.17",
-        "user_id": "u11843",
+        "id": "ev_1790353110588_2035",
+        "type": "sms",
+        "ts": 1790353110.5881479,
+        "ip": "132.142.61.253",
+        "user_id": "u4415",
         "device_id": "web",
         "channel": "openapi",
-        "amount": 48678.46,
-        "country": "BR",
-        "risk_hint": null
+        "amount": 172037.89,
+        "country": "US",
+        "risk_hint": "amount_spike"
       }
     },
     {
-      "id": "al_1790315978184_bca359",
+      "id": "al_1790353110589_c648c8",
       "rule_id": "rule_amount_spike",
-      "rule_name": "金额突增检测",
-      "fingerprint": "bca3592a5a7dc49e",
+      "rule_name": "交易金额出现突增标记时告警",
+      "fingerprint": "c648c8ddbae44c5f",
       "level": "中",
       "risk_score": 58,
       "max_risk_score": 58,
       "action": "review",
-      "reason": "金额突增",
+      "reason": "交易金额出现突增标记时告警",
       "subject": {
-        "ip": "79.245.221.158"
+        "ip": "101.208.107.102",
+        "user_id": "u72033"
       },
       "tags": [
         "金额"
       ],
       "count": 1,
-      "first_seen": 1790315978.1846151,
-      "last_seen": 1790315978.1846151,
+      "first_seen": 1790353110.589856,
+      "last_seen": 1790353110.589856,
       "status": "new",
       "source": "rule_engine",
       "event_sample": {
-        "id": "ev_1790315978184_8333",
+        "id": "ev_1790353110589_2131",
         "type": "transfer",
-        "ts": 1790315978.1846151,
-        "ip": "79.245.221.158",
-        "user_id": "u72223",
+        "ts": 1790353110.589856,
+        "ip": "101.208.107.102",
+        "user_id": "u72033",
         "device_id": "ios",
-        "channel": "pc",
-        "amount": 178389.9,
-        "country": "SG",
-        "risk_hint": "amount_spike"
-      }
-    },
-    {
-      "id": "al_1790315978184_7cfeb2",
-      "rule_id": "rule_big_transfer",
-      "rule_name": "大额转账检测",
-      "fingerprint": "7cfeb2d0493faa52",
-      "level": "中",
-      "risk_score": 70,
-      "max_risk_score": 70,
-      "action": "review",
-      "reason": "大额转账需人工复核",
-      "subject": {
-        "ip": "79.245.221.158"
-      },
-      "tags": [
-        "金额",
-        "转账"
-      ],
-      "count": 1,
-      "first_seen": 1790315978.1846151,
-      "last_seen": 1790315978.1846151,
-      "status": "new",
-      "source": "rule_engine",
-      "event_sample": {
-        "id": "ev_1790315978184_8333",
-        "type": "transfer",
-        "ts": 1790315978.1846151,
-        "ip": "79.245.221.158",
-        "user_id": "u72223",
-        "device_id": "ios",
-        "channel": "pc",
-        "amount": 178389.9,
-        "country": "SG",
-        "risk_hint": "amount_spike"
-      }
-    },
-    {
-      "id": "al_1790315978188_3e6b68",
-      "rule_id": "rule_amount_spike",
-      "rule_name": "金额突增检测",
-      "fingerprint": "3e6b68cc1381c890",
-      "level": "中",
-      "risk_score": 58,
-      "max_risk_score": 58,
-      "action": "review",
-      "reason": "金额突增",
-      "subject": {
-        "ip": "38.19.39.141"
-      },
-      "tags": [
-        "金额"
-      ],
-      "count": 1,
-      "first_seen": 1790315978.1889877,
-      "last_seen": 1790315978.1889877,
-      "status": "new",
-      "source": "rule_engine",
-      "event_sample": {
-        "id": "ev_1790315978188_8799",
-        "type": "transfer",
-        "ts": 1790315978.1889877,
-        "ip": "38.19.39.141",
-        "user_id": "u26114",
-        "device_id": "ios",
-        "channel": "h5",
-        "amount": 119592.35,
-        "country": "SG",
-        "risk_hint": "amount_spike"
-      }
-    },
-    {
-      "id": "al_1790315978188_bb7dca",
-      "rule_id": "rule_big_transfer",
-      "rule_name": "大额转账检测",
-      "fingerprint": "bb7dca7c2426fff8",
-      "level": "中",
-      "risk_score": 70,
-      "max_risk_score": 70,
-      "action": "review",
-      "reason": "大额转账需人工复核",
-      "subject": {
-        "ip": "38.19.39.141"
-      },
-      "tags": [
-        "金额",
-        "转账"
-      ],
-      "count": 1,
-      "first_seen": 1790315978.1889877,
-      "last_seen": 1790315978.1889877,
-      "status": "new",
-      "source": "rule_engine",
-      "event_sample": {
-        "id": "ev_1790315978188_8799",
-        "type": "transfer",
-        "ts": 1790315978.1889877,
-        "ip": "38.19.39.141",
-        "user_id": "u26114",
-        "device_id": "ios",
-        "channel": "h5",
-        "amount": 119592.35,
-        "country": "SG",
-        "risk_hint": "amount_spike"
-      }
-    },
-    {
-      "id": "al_1790315978193_f26600",
-      "rule_id": "rule_amount_spike",
-      "rule_name": "金额突增检测",
-      "fingerprint": "f266002aad45a931",
-      "level": "中",
-      "risk_score": 58,
-      "max_risk_score": 58,
-      "action": "review",
-      "reason": "金额突增",
-      "subject": {
-        "ip": "40.0.186.225"
-      },
-      "tags": [
-        "金额"
-      ],
-      "count": 1,
-      "first_seen": 1790315978.193392,
-      "last_seen": 1790315978.193392,
-      "status": "new",
-      "source": "rule_engine",
-      "event_sample": {
-        "id": "ev_1790315978193_9549",
-        "type": "api",
-        "ts": 1790315978.193392,
-        "ip": "40.0.186.225",
-        "user_id": "u33987",
-        "device_id": "h5",
-        "channel": "app",
-        "amount": 21591.92,
-        "country": "RU",
-        "risk_hint": "amount_spike"
-      }
-    },
-    {
-      "id": "al_1790315978195_05f33b",
-      "rule_id": "rule_amount_spike",
-      "rule_name": "金额突增检测",
-      "fingerprint": "05f33b79dfd92a8d",
-      "level": "中",
-      "risk_score": 58,
-      "max_risk_score": 58,
-      "action": "review",
-      "reason": "金额突增",
-      "subject": {
-        "ip": "146.104.233.251"
-      },
-      "tags": [
-        "金额"
-      ],
-      "count": 1,
-      "first_seen": 1790315978.1958082,
-      "last_seen": 1790315978.1958082,
-      "status": "new",
-      "source": "rule_engine",
-      "event_sample": {
-        "id": "ev_1790315978195_7420",
-        "type": "payment",
-        "ts": 1790315978.1958082,
-        "ip": "146.104.233.251",
-        "user_id": "u99933",
-        "device_id": "android",
-        "channel": "app",
-        "amount": 31606.4,
-        "country": "BR",
-        "risk_hint": "amount_spike"
-      }
-    },
-    {
-      "id": "al_1790315978195_05af3c",
-      "rule_id": "rule_highrisk_country",
-      "rule_name": "高风险国家交易",
-      "fingerprint": "05af3c5a76937d41",
-      "level": "中",
-      "risk_score": 60,
-      "max_risk_score": 60,
-      "action": "review",
-      "reason": "高风险地区交易",
-      "subject": {
-        "ip": "146.104.233.251"
-      },
-      "tags": [
-        "地区"
-      ],
-      "count": 1,
-      "first_seen": 1790315978.1958082,
-      "last_seen": 1790315978.1958082,
-      "status": "new",
-      "source": "rule_engine",
-      "event_sample": {
-        "id": "ev_1790315978195_7420",
-        "type": "payment",
-        "ts": 1790315978.1958082,
-        "ip": "146.104.233.251",
-        "user_id": "u99933",
-        "device_id": "android",
-        "channel": "app",
-        "amount": 31606.4,
-        "country": "BR",
-        "risk_hint": "amount_spike"
-      }
-    },
-    {
-      "id": "al_1790315978200_3f9e9c",
-      "rule_id": "rule_amount_spike",
-      "rule_name": "金额突增检测",
-      "fingerprint": "3f9e9c4438940505",
-      "level": "中",
-      "risk_score": 58,
-      "max_risk_score": 58,
-      "action": "review",
-      "reason": "金额突增",
-      "subject": {
-        "ip": "180.192.58.172"
-      },
-      "tags": [
-        "金额"
-      ],
-      "count": 1,
-      "first_seen": 1790315978.2006226,
-      "last_seen": 1790315978.2006226,
-      "status": "new",
-      "source": "rule_engine",
-      "event_sample": {
-        "id": "ev_1790315978200_9076",
-        "type": "withdraw",
-        "ts": 1790315978.2006226,
-        "ip": "180.192.58.172",
-        "user_id": "u37110",
-        "device_id": "android",
-        "channel": "pc",
-        "amount": 103912.59,
-        "country": "SG",
-        "risk_hint": "amount_spike"
-      }
-    },
-    {
-      "id": "al_1790317441233_2e1896",
-      "rule_id": "rule_huge_amount",
-      "rule_name": "任意类型单笔金额超过 50 万直接拒绝",
-      "fingerprint": "2e18962386ceffe4",
-      "level": "严重",
-      "risk_score": 95,
-      "max_risk_score": 95,
-      "action": "reject",
-      "reason": "任意类型单笔金额超过 50 万直接拒绝",
-      "subject": {
-        "ip": "7.7.7.7"
-      },
-      "tags": [
-        "金额"
-      ],
-      "count": 2,
-      "first_seen": 1790317441.2339046,
-      "last_seen": 1790317441.2339046,
-      "status": "new",
-      "source": "rule_engine",
-      "event_sample": {
-        "type": "transfer",
-        "amount": 600000,
+        "channel": "openapi",
+        "amount": 139616.35,
         "country": "CN",
-        "ip": "7.7.7.7",
-        "user_id": "u9",
-        "ts": 1790317441.2339046,
-        "id": "ev_1790317441233"
+        "risk_hint": "amount_spike"
       }
     },
     {
-      "id": "al_1790317441233_aa432e",
+      "id": "al_1790353110589_ab8821",
       "rule_id": "rule_big_transfer",
       "rule_name": "单笔转账金额超过 10 万进入人工复核",
-      "fingerprint": "aa432e8446ad19b7",
+      "fingerprint": "ab8821ccbc4aff5d",
       "level": "中",
       "risk_score": 70,
       "max_risk_score": 70,
       "action": "review",
       "reason": "单笔转账金额超过 10 万进入人工复核",
       "subject": {
-        "ip": "7.7.7.7"
+        "ip": "101.208.107.102",
+        "user_id": "u72033"
       },
       "tags": [
         "金额",
         "转账"
       ],
       "count": 1,
-      "first_seen": 1790317441.2339046,
-      "last_seen": 1790317441.2339046,
+      "first_seen": 1790353110.589856,
+      "last_seen": 1790353110.589856,
       "status": "new",
       "source": "rule_engine",
       "event_sample": {
+        "id": "ev_1790353110589_2131",
         "type": "transfer",
-        "amount": 600000,
+        "ts": 1790353110.589856,
+        "ip": "101.208.107.102",
+        "user_id": "u72033",
+        "device_id": "ios",
+        "channel": "openapi",
+        "amount": 139616.35,
         "country": "CN",
+        "risk_hint": "amount_spike"
+      }
+    },
+    {
+      "id": "al_1790353110593_e566be",
+      "rule_id": "rule_amount_spike",
+      "rule_name": "交易金额出现突增标记时告警",
+      "fingerprint": "e566be549481d8cc",
+      "level": "中",
+      "risk_score": 58,
+      "max_risk_score": 58,
+      "action": "review",
+      "reason": "交易金额出现突增标记时告警",
+      "subject": {
+        "ip": "133.219.168.69",
+        "user_id": "u37859"
+      },
+      "tags": [
+        "金额"
+      ],
+      "count": 1,
+      "first_seen": 1790353110.593051,
+      "last_seen": 1790353110.593051,
+      "status": "new",
+      "source": "rule_engine",
+      "event_sample": {
+        "id": "ev_1790353110593_9207",
+        "type": "sms",
+        "ts": 1790353110.593051,
+        "ip": "133.219.168.69",
+        "user_id": "u37859",
+        "device_id": "ios",
+        "channel": "openapi",
+        "amount": 139661.23,
+        "country": "RU",
+        "risk_hint": "amount_spike"
+      }
+    },
+    {
+      "id": "al_1790353114121_4043c9",
+      "rule_id": "rule_login_freq",
+      "rule_name": "同一 IP 60 秒内登录次数超过 5 次视为撞库/暴力破解",
+      "fingerprint": "4043c92f8d2e14f1",
+      "level": "高",
+      "risk_score": 90,
+      "max_risk_score": 90,
+      "action": "reject",
+      "reason": "同一 IP 60 秒内登录次数超过 5 次视为撞库/暴力破解",
+      "subject": {
         "ip": "7.7.7.7",
-        "user_id": "u9",
-        "ts": 1790317441.2339046,
-        "id": "ev_1790317441233"
+        "user_id": "u_hf"
+      },
+      "tags": [
+        "高频",
+        "登录"
+      ],
+      "count": 2,
+      "first_seen": 1790353114.1217308,
+      "last_seen": 1790353401.4267588,
+      "status": "new",
+      "source": "rule_engine",
+      "event_sample": {
+        "id": "ev_hf_4",
+        "type": "login",
+        "ip": "7.7.7.7",
+        "user_id": "u_hf",
+        "ts": 1790353401.4267588
+      }
+    },
+    {
+      "id": "al_1790353397871_b862fa",
+      "rule_id": "rule_amount_spike",
+      "rule_name": "交易金额出现突增标记时告警",
+      "fingerprint": "b862faa7b0600a9c",
+      "level": "中",
+      "risk_score": 58,
+      "max_risk_score": 58,
+      "action": "review",
+      "reason": "交易金额出现突增标记时告警",
+      "subject": {
+        "ip": "65.12.166.117",
+        "user_id": "u62906"
+      },
+      "tags": [
+        "金额"
+      ],
+      "count": 1,
+      "first_seen": 1790353397.8716607,
+      "last_seen": 1790353397.8716607,
+      "status": "new",
+      "source": "rule_engine",
+      "event_sample": {
+        "id": "ev_1790353397871_4110",
+        "type": "transfer",
+        "ts": 1790353397.8716607,
+        "ip": "65.12.166.117",
+        "user_id": "u62906",
+        "device_id": "ios",
+        "channel": "openapi",
+        "amount": 1429.25,
+        "country": "CN",
+        "risk_hint": "amount_spike"
+      }
+    },
+    {
+      "id": "al_1790353397874_dfda7b",
+      "rule_id": "rule_highrisk_country",
+      "rule_name": "来自高风险国家/地区的交易转人工复核",
+      "fingerprint": "dfda7bd47ab3b836",
+      "level": "中",
+      "risk_score": 60,
+      "max_risk_score": 60,
+      "action": "review",
+      "reason": "来自高风险国家/地区的交易转人工复核",
+      "subject": {
+        "ip": "80.168.222.156",
+        "user_id": "u29773"
+      },
+      "tags": [
+        "地区"
+      ],
+      "count": 1,
+      "first_seen": 1790353397.8741803,
+      "last_seen": 1790353397.8741803,
+      "status": "new",
+      "source": "rule_engine",
+      "event_sample": {
+        "id": "ev_1790353397874_4172",
+        "type": "transfer",
+        "ts": 1790353397.8741803,
+        "ip": "80.168.222.156",
+        "user_id": "u29773",
+        "device_id": "ios",
+        "channel": "h5",
+        "amount": 141129.33,
+        "country": "BR",
+        "risk_hint": null
+      }
+    },
+    {
+      "id": "al_1790353397874_9f175c",
+      "rule_id": "rule_big_transfer",
+      "rule_name": "单笔转账金额超过 10 万进入人工复核",
+      "fingerprint": "9f175c45702b3156",
+      "level": "中",
+      "risk_score": 70,
+      "max_risk_score": 70,
+      "action": "review",
+      "reason": "单笔转账金额超过 10 万进入人工复核",
+      "subject": {
+        "ip": "80.168.222.156",
+        "user_id": "u29773"
+      },
+      "tags": [
+        "金额",
+        "转账"
+      ],
+      "count": 1,
+      "first_seen": 1790353397.8741803,
+      "last_seen": 1790353397.8741803,
+      "status": "new",
+      "source": "rule_engine",
+      "event_sample": {
+        "id": "ev_1790353397874_4172",
+        "type": "transfer",
+        "ts": 1790353397.8741803,
+        "ip": "80.168.222.156",
+        "user_id": "u29773",
+        "device_id": "ios",
+        "channel": "h5",
+        "amount": 141129.33,
+        "country": "BR",
+        "risk_hint": null
+      }
+    },
+    {
+      "id": "al_1790353397878_17b8fa",
+      "rule_id": "rule_new_device",
+      "rule_name": "新设备登录产生告警",
+      "fingerprint": "17b8faf1bd0c1b60",
+      "level": "低",
+      "risk_score": 55,
+      "max_risk_score": 55,
+      "action": "alert",
+      "reason": "新设备登录产生告警",
+      "subject": {
+        "ip": "94.117.205.131",
+        "user_id": "u53036"
+      },
+      "tags": [
+        "设备"
+      ],
+      "count": 1,
+      "first_seen": 1790353397.8783104,
+      "last_seen": 1790353397.8783104,
+      "status": "new",
+      "source": "rule_engine",
+      "event_sample": {
+        "id": "ev_1790353397878_6403",
+        "type": "login",
+        "ts": 1790353397.8783104,
+        "ip": "94.117.205.131",
+        "user_id": "u53036",
+        "device_id": "web",
+        "channel": "h5",
+        "amount": null,
+        "country": "RU",
+        "risk_hint": "new_device"
+      }
+    },
+    {
+      "id": "al_1790353397880_6dae94",
+      "rule_id": "rule_big_transfer",
+      "rule_name": "单笔转账金额超过 10 万进入人工复核",
+      "fingerprint": "6dae9454bdeb00f4",
+      "level": "中",
+      "risk_score": 70,
+      "max_risk_score": 70,
+      "action": "review",
+      "reason": "单笔转账金额超过 10 万进入人工复核",
+      "subject": {
+        "ip": "148.252.140.129",
+        "user_id": "u76413"
+      },
+      "tags": [
+        "金额",
+        "转账"
+      ],
+      "count": 1,
+      "first_seen": 1790353397.8805134,
+      "last_seen": 1790353397.8805134,
+      "status": "new",
+      "source": "rule_engine",
+      "event_sample": {
+        "id": "ev_1790353397880_6083",
+        "type": "transfer",
+        "ts": 1790353397.8805134,
+        "ip": "148.252.140.129",
+        "user_id": "u76413",
+        "device_id": "android",
+        "channel": "pc",
+        "amount": 155282.9,
+        "country": "CN",
+        "risk_hint": "new_device"
+      }
+    },
+    {
+      "id": "al_1790353397882_11f9b0",
+      "rule_id": "rule_amount_spike",
+      "rule_name": "交易金额出现突增标记时告警",
+      "fingerprint": "11f9b0db28435d02",
+      "level": "中",
+      "risk_score": 58,
+      "max_risk_score": 58,
+      "action": "review",
+      "reason": "交易金额出现突增标记时告警",
+      "subject": {
+        "ip": "3.26.217.244",
+        "user_id": "u72963"
+      },
+      "tags": [
+        "金额"
+      ],
+      "count": 1,
+      "first_seen": 1790353397.8824825,
+      "last_seen": 1790353397.8824825,
+      "status": "new",
+      "source": "rule_engine",
+      "event_sample": {
+        "id": "ev_1790353397882_4496",
+        "type": "withdraw",
+        "ts": 1790353397.8824825,
+        "ip": "3.26.217.244",
+        "user_id": "u72963",
+        "device_id": "android",
+        "channel": "pc",
+        "amount": 58128.75,
+        "country": "BR",
+        "risk_hint": "amount_spike"
+      }
+    },
+    {
+      "id": "al_1790353397882_29fc93",
+      "rule_id": "rule_highrisk_country",
+      "rule_name": "来自高风险国家/地区的交易转人工复核",
+      "fingerprint": "29fc93eb8018f45f",
+      "level": "中",
+      "risk_score": 60,
+      "max_risk_score": 60,
+      "action": "review",
+      "reason": "来自高风险国家/地区的交易转人工复核",
+      "subject": {
+        "ip": "3.26.217.244",
+        "user_id": "u72963"
+      },
+      "tags": [
+        "地区"
+      ],
+      "count": 1,
+      "first_seen": 1790353397.8824825,
+      "last_seen": 1790353397.8824825,
+      "status": "new",
+      "source": "rule_engine",
+      "event_sample": {
+        "id": "ev_1790353397882_4496",
+        "type": "withdraw",
+        "ts": 1790353397.8824825,
+        "ip": "3.26.217.244",
+        "user_id": "u72963",
+        "device_id": "android",
+        "channel": "pc",
+        "amount": 58128.75,
+        "country": "BR",
+        "risk_hint": "amount_spike"
+      }
+    },
+    {
+      "id": "al_1790353397886_f87ce8",
+      "rule_id": "rule_big_transfer",
+      "rule_name": "单笔转账金额超过 10 万进入人工复核",
+      "fingerprint": "f87ce8a73bb5c656",
+      "level": "中",
+      "risk_score": 70,
+      "max_risk_score": 70,
+      "action": "review",
+      "reason": "单笔转账金额超过 10 万进入人工复核",
+      "subject": {
+        "ip": "135.246.138.137",
+        "user_id": "u29668"
+      },
+      "tags": [
+        "金额",
+        "转账"
+      ],
+      "count": 1,
+      "first_seen": 1790353397.8867242,
+      "last_seen": 1790353397.8867242,
+      "status": "new",
+      "source": "rule_engine",
+      "event_sample": {
+        "id": "ev_1790353397886_4249",
+        "type": "transfer",
+        "ts": 1790353397.8867242,
+        "ip": "135.246.138.137",
+        "user_id": "u29668",
+        "device_id": "ios",
+        "channel": "app",
+        "amount": 187389.56,
+        "country": "SG",
+        "risk_hint": "ip_anomaly"
+      }
+    },
+    {
+      "id": "al_1790353397889_714811",
+      "rule_id": "rule_big_transfer",
+      "rule_name": "单笔转账金额超过 10 万进入人工复核",
+      "fingerprint": "7148114ed1f824a5",
+      "level": "中",
+      "risk_score": 70,
+      "max_risk_score": 70,
+      "action": "review",
+      "reason": "单笔转账金额超过 10 万进入人工复核",
+      "subject": {
+        "ip": "180.236.250.87",
+        "user_id": "u61785"
+      },
+      "tags": [
+        "金额",
+        "转账"
+      ],
+      "count": 1,
+      "first_seen": 1790353397.889161,
+      "last_seen": 1790353397.889161,
+      "status": "new",
+      "source": "rule_engine",
+      "event_sample": {
+        "id": "ev_1790353397889_2070",
+        "type": "transfer",
+        "ts": 1790353397.889161,
+        "ip": "180.236.250.87",
+        "user_id": "u61785",
+        "device_id": "web",
+        "channel": "app",
+        "amount": 100102.12,
+        "country": "SG",
+        "risk_hint": null
+      }
+    },
+    {
+      "id": "al_1790353397891_69b6c6",
+      "rule_id": "rule_amount_spike",
+      "rule_name": "交易金额出现突增标记时告警",
+      "fingerprint": "69b6c6c859ac9d50",
+      "level": "中",
+      "risk_score": 58,
+      "max_risk_score": 58,
+      "action": "review",
+      "reason": "交易金额出现突增标记时告警",
+      "subject": {
+        "ip": "66.89.227.60",
+        "user_id": "u20053"
+      },
+      "tags": [
+        "金额"
+      ],
+      "count": 1,
+      "first_seen": 1790353397.8912492,
+      "last_seen": 1790353397.8912492,
+      "status": "new",
+      "source": "rule_engine",
+      "event_sample": {
+        "id": "ev_1790353397891_7108",
+        "type": "order",
+        "ts": 1790353397.8912492,
+        "ip": "66.89.227.60",
+        "user_id": "u20053",
+        "device_id": "web",
+        "channel": "pc",
+        "amount": 194107.47,
+        "country": "CN",
+        "risk_hint": "amount_spike"
+      }
+    },
+    {
+      "id": "al_1790353397893_0e1abb",
+      "rule_id": "rule_big_transfer",
+      "rule_name": "单笔转账金额超过 10 万进入人工复核",
+      "fingerprint": "0e1abb42d8c7883e",
+      "level": "中",
+      "risk_score": 70,
+      "max_risk_score": 70,
+      "action": "review",
+      "reason": "单笔转账金额超过 10 万进入人工复核",
+      "subject": {
+        "ip": "104.220.183.182",
+        "user_id": "u62165"
+      },
+      "tags": [
+        "金额",
+        "转账"
+      ],
+      "count": 1,
+      "first_seen": 1790353397.8934717,
+      "last_seen": 1790353397.8934717,
+      "status": "new",
+      "source": "rule_engine",
+      "event_sample": {
+        "id": "ev_1790353397893_9720",
+        "type": "transfer",
+        "ts": 1790353397.8934717,
+        "ip": "104.220.183.182",
+        "user_id": "u62165",
+        "device_id": "ios",
+        "channel": "app",
+        "amount": 144098.46,
+        "country": "CN",
+        "risk_hint": "new_device"
+      }
+    },
+    {
+      "id": "al_1790353397895_f11b70",
+      "rule_id": "rule_new_device",
+      "rule_name": "新设备登录产生告警",
+      "fingerprint": "f11b7071dc60ccac",
+      "level": "低",
+      "risk_score": 55,
+      "max_risk_score": 55,
+      "action": "alert",
+      "reason": "新设备登录产生告警",
+      "subject": {
+        "ip": "112.18.7.105",
+        "user_id": "u40245"
+      },
+      "tags": [
+        "设备"
+      ],
+      "count": 1,
+      "first_seen": 1790353397.8958087,
+      "last_seen": 1790353397.8958087,
+      "status": "new",
+      "source": "rule_engine",
+      "event_sample": {
+        "id": "ev_1790353397895_8670",
+        "type": "login",
+        "ts": 1790353397.8958087,
+        "ip": "112.18.7.105",
+        "user_id": "u40245",
+        "device_id": "ios",
+        "channel": "pc",
+        "amount": null,
+        "country": "US",
+        "risk_hint": "new_device"
+      }
+    },
+    {
+      "id": "al_1790353397898_ada94d",
+      "rule_id": "rule_big_transfer",
+      "rule_name": "单笔转账金额超过 10 万进入人工复核",
+      "fingerprint": "ada94d67b8aab8cf",
+      "level": "中",
+      "risk_score": 70,
+      "max_risk_score": 70,
+      "action": "review",
+      "reason": "单笔转账金额超过 10 万进入人工复核",
+      "subject": {
+        "ip": "70.22.96.54",
+        "user_id": "u95526"
+      },
+      "tags": [
+        "金额",
+        "转账"
+      ],
+      "count": 1,
+      "first_seen": 1790353397.8982027,
+      "last_seen": 1790353397.8982027,
+      "status": "new",
+      "source": "rule_engine",
+      "event_sample": {
+        "id": "ev_1790353397898_1139",
+        "type": "transfer",
+        "ts": 1790353397.8982027,
+        "ip": "70.22.96.54",
+        "user_id": "u95526",
+        "device_id": "h5",
+        "channel": "app",
+        "amount": 133513.53,
+        "country": "CN",
+        "risk_hint": "ip_anomaly"
+      }
+    },
+    {
+      "id": "al_1790353566314_265e3f",
+      "rule_id": "rule_highrisk_country",
+      "rule_name": "来自高风险国家/地区的交易转人工复核",
+      "fingerprint": "265e3f572f82634c",
+      "level": "中",
+      "risk_score": 60,
+      "max_risk_score": 60,
+      "action": "review",
+      "reason": "来自高风险国家/地区的交易转人工复核",
+      "subject": {
+        "ip": "202.84.242.24",
+        "user_id": "u34527"
+      },
+      "tags": [
+        "地区"
+      ],
+      "count": 1,
+      "first_seen": 1790353566.314368,
+      "last_seen": 1790353566.314368,
+      "status": "new",
+      "source": "rule_engine",
+      "event_sample": {
+        "id": "ev_1790353566314_1863",
+        "type": "transfer",
+        "ts": 1790353566.314368,
+        "ip": "202.84.242.24",
+        "user_id": "u34527",
+        "device_id": "h5",
+        "channel": "app",
+        "amount": 132953.73,
+        "country": "BR",
+        "risk_hint": "ip_anomaly"
+      }
+    },
+    {
+      "id": "al_1790353566314_98f8ee",
+      "rule_id": "rule_big_transfer",
+      "rule_name": "单笔转账金额超过 10 万进入人工复核",
+      "fingerprint": "98f8ee06920b2e20",
+      "level": "中",
+      "risk_score": 70,
+      "max_risk_score": 70,
+      "action": "review",
+      "reason": "单笔转账金额超过 10 万进入人工复核",
+      "subject": {
+        "ip": "202.84.242.24",
+        "user_id": "u34527"
+      },
+      "tags": [
+        "金额",
+        "转账"
+      ],
+      "count": 1,
+      "first_seen": 1790353566.314368,
+      "last_seen": 1790353566.314368,
+      "status": "new",
+      "source": "rule_engine",
+      "event_sample": {
+        "id": "ev_1790353566314_1863",
+        "type": "transfer",
+        "ts": 1790353566.314368,
+        "ip": "202.84.242.24",
+        "user_id": "u34527",
+        "device_id": "h5",
+        "channel": "app",
+        "amount": 132953.73,
+        "country": "BR",
+        "risk_hint": "ip_anomaly"
+      }
+    },
+    {
+      "id": "al_1790353566319_688e39",
+      "rule_id": "rule_new_device",
+      "rule_name": "新设备登录产生告警",
+      "fingerprint": "688e3957167eebe9",
+      "level": "低",
+      "risk_score": 55,
+      "max_risk_score": 55,
+      "action": "alert",
+      "reason": "新设备登录产生告警",
+      "subject": {
+        "ip": "81.5.72.237",
+        "user_id": "u73383"
+      },
+      "tags": [
+        "设备"
+      ],
+      "count": 1,
+      "first_seen": 1790353566.3197296,
+      "last_seen": 1790353566.3197296,
+      "status": "new",
+      "source": "rule_engine",
+      "event_sample": {
+        "id": "ev_1790353566319_8609",
+        "type": "login",
+        "ts": 1790353566.3197296,
+        "ip": "81.5.72.237",
+        "user_id": "u73383",
+        "device_id": "web",
+        "channel": "app",
+        "amount": null,
+        "country": "CN",
+        "risk_hint": "new_device"
+      }
+    },
+    {
+      "id": "al_1790353566322_9e9e3b",
+      "rule_id": "rule_big_transfer",
+      "rule_name": "单笔转账金额超过 10 万进入人工复核",
+      "fingerprint": "9e9e3b5203f18c28",
+      "level": "中",
+      "risk_score": 70,
+      "max_risk_score": 70,
+      "action": "review",
+      "reason": "单笔转账金额超过 10 万进入人工复核",
+      "subject": {
+        "ip": "165.130.17.181",
+        "user_id": "u9623"
+      },
+      "tags": [
+        "金额",
+        "转账"
+      ],
+      "count": 1,
+      "first_seen": 1790353566.3225403,
+      "last_seen": 1790353566.3225403,
+      "status": "new",
+      "source": "rule_engine",
+      "event_sample": {
+        "id": "ev_1790353566322_2869",
+        "type": "transfer",
+        "ts": 1790353566.3225403,
+        "ip": "165.130.17.181",
+        "user_id": "u9623",
+        "device_id": "ios",
+        "channel": "h5",
+        "amount": 176885.76,
+        "country": "SG",
+        "risk_hint": "new_device"
+      }
+    },
+    {
+      "id": "al_1790353566325_4a8d83",
+      "rule_id": "rule_new_device",
+      "rule_name": "新设备登录产生告警",
+      "fingerprint": "4a8d8370f11d7116",
+      "level": "低",
+      "risk_score": 55,
+      "max_risk_score": 55,
+      "action": "alert",
+      "reason": "新设备登录产生告警",
+      "subject": {
+        "ip": "37.236.200.5",
+        "user_id": "u99541"
+      },
+      "tags": [
+        "设备"
+      ],
+      "count": 1,
+      "first_seen": 1790353566.325331,
+      "last_seen": 1790353566.325331,
+      "status": "new",
+      "source": "rule_engine",
+      "event_sample": {
+        "id": "ev_1790353566325_9881",
+        "type": "login",
+        "ts": 1790353566.325331,
+        "ip": "37.236.200.5",
+        "user_id": "u99541",
+        "device_id": "web",
+        "channel": "h5",
+        "amount": null,
+        "country": "RU",
+        "risk_hint": "new_device"
+      }
+    },
+    {
+      "id": "al_1790353566328_c3feb0",
+      "rule_id": "rule_amount_spike",
+      "rule_name": "交易金额出现突增标记时告警",
+      "fingerprint": "c3feb01f37ab7ff9",
+      "level": "中",
+      "risk_score": 58,
+      "max_risk_score": 58,
+      "action": "review",
+      "reason": "交易金额出现突增标记时告警",
+      "subject": {
+        "ip": "98.48.39.91",
+        "user_id": "u57196"
+      },
+      "tags": [
+        "金额"
+      ],
+      "count": 1,
+      "first_seen": 1790353566.3281252,
+      "last_seen": 1790353566.3281252,
+      "status": "new",
+      "source": "rule_engine",
+      "event_sample": {
+        "id": "ev_1790353566328_7915",
+        "type": "withdraw",
+        "ts": 1790353566.3281252,
+        "ip": "98.48.39.91",
+        "user_id": "u57196",
+        "device_id": "android",
+        "channel": "pc",
+        "amount": 164688.6,
+        "country": "SG",
+        "risk_hint": "amount_spike"
+      }
+    },
+    {
+      "id": "al_1790353566331_2940d9",
+      "rule_id": "rule_amount_spike",
+      "rule_name": "交易金额出现突增标记时告警",
+      "fingerprint": "2940d9d86b958f62",
+      "level": "中",
+      "risk_score": 58,
+      "max_risk_score": 58,
+      "action": "review",
+      "reason": "交易金额出现突增标记时告警",
+      "subject": {
+        "ip": "161.31.59.171",
+        "user_id": "u61178"
+      },
+      "tags": [
+        "金额"
+      ],
+      "count": 1,
+      "first_seen": 1790353566.3310158,
+      "last_seen": 1790353566.3310158,
+      "status": "new",
+      "source": "rule_engine",
+      "event_sample": {
+        "id": "ev_1790353566331_8940",
+        "type": "register",
+        "ts": 1790353566.3310158,
+        "ip": "161.31.59.171",
+        "user_id": "u61178",
+        "device_id": "web",
+        "channel": "app",
+        "amount": null,
+        "country": "SG",
+        "risk_hint": "amount_spike"
+      }
+    },
+    {
+      "id": "al_1790353566333_c7da60",
+      "rule_id": "rule_amount_spike",
+      "rule_name": "交易金额出现突增标记时告警",
+      "fingerprint": "c7da60b1853c1c0b",
+      "level": "中",
+      "risk_score": 58,
+      "max_risk_score": 58,
+      "action": "review",
+      "reason": "交易金额出现突增标记时告警",
+      "subject": {
+        "ip": "126.81.209.244",
+        "user_id": "u64853"
+      },
+      "tags": [
+        "金额"
+      ],
+      "count": 1,
+      "first_seen": 1790353566.3338125,
+      "last_seen": 1790353566.3338125,
+      "status": "new",
+      "source": "rule_engine",
+      "event_sample": {
+        "id": "ev_1790353566333_5473",
+        "type": "login",
+        "ts": 1790353566.3338125,
+        "ip": "126.81.209.244",
+        "user_id": "u64853",
+        "device_id": "ios",
+        "channel": "app",
+        "amount": null,
+        "country": "RU",
+        "risk_hint": "amount_spike"
+      }
+    },
+    {
+      "id": "al_1790353566336_5d0cd1",
+      "rule_id": "rule_new_device",
+      "rule_name": "新设备登录产生告警",
+      "fingerprint": "5d0cd1c1781106ae",
+      "level": "低",
+      "risk_score": 55,
+      "max_risk_score": 55,
+      "action": "alert",
+      "reason": "新设备登录产生告警",
+      "subject": {
+        "ip": "39.4.1.121",
+        "user_id": "u34474"
+      },
+      "tags": [
+        "设备"
+      ],
+      "count": 1,
+      "first_seen": 1790353566.3364747,
+      "last_seen": 1790353566.3364747,
+      "status": "new",
+      "source": "rule_engine",
+      "event_sample": {
+        "id": "ev_1790353566336_6380",
+        "type": "login",
+        "ts": 1790353566.3364747,
+        "ip": "39.4.1.121",
+        "user_id": "u34474",
+        "device_id": "web",
+        "channel": "app",
+        "amount": null,
+        "country": "RU",
+        "risk_hint": "new_device"
+      }
+    },
+    {
+      "id": "al_1790353566339_704bba",
+      "rule_id": "rule_big_transfer",
+      "rule_name": "单笔转账金额超过 10 万进入人工复核",
+      "fingerprint": "704bbafac94ab2a3",
+      "level": "中",
+      "risk_score": 70,
+      "max_risk_score": 70,
+      "action": "review",
+      "reason": "单笔转账金额超过 10 万进入人工复核",
+      "subject": {
+        "ip": "52.196.93.136",
+        "user_id": "u5071"
+      },
+      "tags": [
+        "金额",
+        "转账"
+      ],
+      "count": 1,
+      "first_seen": 1790353566.3393893,
+      "last_seen": 1790353566.3393893,
+      "status": "new",
+      "source": "rule_engine",
+      "event_sample": {
+        "id": "ev_1790353566339_9781",
+        "type": "transfer",
+        "ts": 1790353566.3393893,
+        "ip": "52.196.93.136",
+        "user_id": "u5071",
+        "device_id": "h5",
+        "channel": "app",
+        "amount": 154652.28,
+        "country": "SG",
+        "risk_hint": "new_device"
+      }
+    },
+    {
+      "id": "al_1790353566342_8425d5",
+      "rule_id": "rule_amount_spike",
+      "rule_name": "交易金额出现突增标记时告警",
+      "fingerprint": "8425d5a55b977489",
+      "level": "中",
+      "risk_score": 58,
+      "max_risk_score": 58,
+      "action": "review",
+      "reason": "交易金额出现突增标记时告警",
+      "subject": {
+        "ip": "204.228.59.29",
+        "user_id": "u39779"
+      },
+      "tags": [
+        "金额"
+      ],
+      "count": 1,
+      "first_seen": 1790353566.342143,
+      "last_seen": 1790353566.342143,
+      "status": "new",
+      "source": "rule_engine",
+      "event_sample": {
+        "id": "ev_1790353566342_6845",
+        "type": "transfer",
+        "ts": 1790353566.342143,
+        "ip": "204.228.59.29",
+        "user_id": "u39779",
+        "device_id": "android",
+        "channel": "h5",
+        "amount": 194162.51,
+        "country": "BR",
+        "risk_hint": "amount_spike"
+      }
+    },
+    {
+      "id": "al_1790353566342_247c5b",
+      "rule_id": "rule_highrisk_country",
+      "rule_name": "来自高风险国家/地区的交易转人工复核",
+      "fingerprint": "247c5b390a145e24",
+      "level": "中",
+      "risk_score": 60,
+      "max_risk_score": 60,
+      "action": "review",
+      "reason": "来自高风险国家/地区的交易转人工复核",
+      "subject": {
+        "ip": "204.228.59.29",
+        "user_id": "u39779"
+      },
+      "tags": [
+        "地区"
+      ],
+      "count": 1,
+      "first_seen": 1790353566.342143,
+      "last_seen": 1790353566.342143,
+      "status": "new",
+      "source": "rule_engine",
+      "event_sample": {
+        "id": "ev_1790353566342_6845",
+        "type": "transfer",
+        "ts": 1790353566.342143,
+        "ip": "204.228.59.29",
+        "user_id": "u39779",
+        "device_id": "android",
+        "channel": "h5",
+        "amount": 194162.51,
+        "country": "BR",
+        "risk_hint": "amount_spike"
+      }
+    },
+    {
+      "id": "al_1790353566342_2d2597",
+      "rule_id": "rule_big_transfer",
+      "rule_name": "单笔转账金额超过 10 万进入人工复核",
+      "fingerprint": "2d2597ab2013c0ab",
+      "level": "中",
+      "risk_score": 70,
+      "max_risk_score": 70,
+      "action": "review",
+      "reason": "单笔转账金额超过 10 万进入人工复核",
+      "subject": {
+        "ip": "204.228.59.29",
+        "user_id": "u39779"
+      },
+      "tags": [
+        "金额",
+        "转账"
+      ],
+      "count": 1,
+      "first_seen": 1790353566.342143,
+      "last_seen": 1790353566.342143,
+      "status": "new",
+      "source": "rule_engine",
+      "event_sample": {
+        "id": "ev_1790353566342_6845",
+        "type": "transfer",
+        "ts": 1790353566.342143,
+        "ip": "204.228.59.29",
+        "user_id": "u39779",
+        "device_id": "android",
+        "channel": "h5",
+        "amount": 194162.51,
+        "country": "BR",
+        "risk_hint": "amount_spike"
+      }
+    },
+    {
+      "id": "al_1790353566350_748d8a",
+      "rule_id": "rule_amount_spike",
+      "rule_name": "交易金额出现突增标记时告警",
+      "fingerprint": "748d8a874ce8c4be",
+      "level": "中",
+      "risk_score": 58,
+      "max_risk_score": 58,
+      "action": "review",
+      "reason": "交易金额出现突增标记时告警",
+      "subject": {
+        "ip": "69.70.194.17",
+        "user_id": "u7064"
+      },
+      "tags": [
+        "金额"
+      ],
+      "count": 1,
+      "first_seen": 1790353566.3506684,
+      "last_seen": 1790353566.3506684,
+      "status": "new",
+      "source": "rule_engine",
+      "event_sample": {
+        "id": "ev_1790353566350_8820",
+        "type": "api",
+        "ts": 1790353566.3506684,
+        "ip": "69.70.194.17",
+        "user_id": "u7064",
+        "device_id": "android",
+        "channel": "pc",
+        "amount": 61792.92,
+        "country": "US",
+        "risk_hint": "amount_spike"
+      }
+    },
+    {
+      "id": "al_1790353566353_46447a",
+      "rule_id": "rule_amount_spike",
+      "rule_name": "交易金额出现突增标记时告警",
+      "fingerprint": "46447a32c9e4b8a8",
+      "level": "中",
+      "risk_score": 58,
+      "max_risk_score": 58,
+      "action": "review",
+      "reason": "交易金额出现突增标记时告警",
+      "subject": {
+        "ip": "105.76.27.246",
+        "user_id": "u69888"
+      },
+      "tags": [
+        "金额"
+      ],
+      "count": 1,
+      "first_seen": 1790353566.3538094,
+      "last_seen": 1790353566.3538094,
+      "status": "new",
+      "source": "rule_engine",
+      "event_sample": {
+        "id": "ev_1790353566353_6806",
+        "type": "withdraw",
+        "ts": 1790353566.3538094,
+        "ip": "105.76.27.246",
+        "user_id": "u69888",
+        "device_id": "ios",
+        "channel": "h5",
+        "amount": 133149.22,
+        "country": "US",
+        "risk_hint": "amount_spike"
       }
     }
   ]

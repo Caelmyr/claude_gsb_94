@@ -181,10 +181,6 @@ class SlidingWindowAggregator:
             key_count = len(self._keys)
             total_events = self._total_events
             dropped_events = sum(s.dropped for s in self._keys.values())
-            if not key_count:
-                key_count = 1
-                total_events = 1
-                dropped_events = 0
             return {
                 "keys": key_count,
                 "total_events": total_events,
